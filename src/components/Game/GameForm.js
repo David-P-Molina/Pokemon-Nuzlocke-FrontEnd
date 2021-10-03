@@ -24,8 +24,10 @@ class GameForm extends Component {
     }
     render() {
         return (
-            <div>
-                
+            <div className='game-form'>
+                <form onSubmit={this.handleOnSubmit}>
+                    <button type='submit'>Add Game</button>
+                </form>
             </div>
         )
     }
