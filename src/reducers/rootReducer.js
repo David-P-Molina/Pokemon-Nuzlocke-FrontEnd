@@ -1,14 +1,20 @@
 import { combineReducers } from 'redux'
-import GamesReducer from './GamesReducer'
-import GraveyardReducer from './GraveyardReducer'
-import NuzlockeReducer from './NuzlockeReducer'
-import PokemonReducer from './PokemonReducer'
-import RulesReducer from './RulesReducer'
-import TeamsReducer from './TeamsReducer'
-import TrainersReducer from './TrainersReducer'
+import gamesReducer from './gamesReducer'
+import graveyardReducer from './graveyardReducer'
+import nuzlockeReducer from './nuzlockeReducer'
+import pokemonReducer from './pokemonReducer'
+import rulesReducer from './rulesReducer'
+import teamsReducer from './teamsReducer'
+import trainersReducer from './trainersReducer'
 
 const rootReducer = combineReducers({
-
+    games: gamesReducer,
+    graveyardReducer,
+    nuzlockes: nuzlockeReducer,
+    pokemon: pokemonReducer,
+    rules: rulesReducer,
+    teams: teamsReducer,
+    trainers: trainersReducer
 })
 
 export default rootReducer
