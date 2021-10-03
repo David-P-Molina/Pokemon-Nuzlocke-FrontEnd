@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class GameForm extends Component {
+class GameForm extends Component {
     render() {
         return (
             <div>

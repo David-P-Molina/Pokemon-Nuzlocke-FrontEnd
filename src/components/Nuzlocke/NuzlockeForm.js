@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class NuzlockeForm extends Component {
+class NuzlockeForm extends Component {
     render() {
         return (
             <div>

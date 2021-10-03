@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class GravestoneForm extends Component {
+class GravestoneForm extends Component {
     render() {
         return (
             <div>
