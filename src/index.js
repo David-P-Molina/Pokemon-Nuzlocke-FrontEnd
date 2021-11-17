@@ -7,9 +7,11 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import rootReducer from './reducers/rootReducer';
+
 
 const store = createStore(
-  reducer,
+  rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 )
 
