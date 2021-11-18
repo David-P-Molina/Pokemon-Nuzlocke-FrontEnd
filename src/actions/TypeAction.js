@@ -1,4 +1,5 @@
 import { URL } from '../../src/globalVariables'
+
 export const fetchTypes= () => {
     return (dispatch) => {
         fetch(`${URL}/types`)
@@ -6,10 +7,11 @@ export const fetchTypes= () => {
             if (response.ok) {
                 return response.json()
                 .then((types) => {
-                   console.log(types)
+                   dispatch({ type:'FETCH_TYPES', types })
                 })
             } else {
                 return response.json()
+                .then(errors => console.log(errors))
                 }
             }
         ))
