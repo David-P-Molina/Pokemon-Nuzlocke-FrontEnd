@@ -1,6 +1,7 @@
+import { URL } from '../../src/globalVariables'
 export const fetchGames= () => {
     return (dispatch) => {
-        fetch(`localhost:3000/games`)
+        fetch(`${URL}/games`)
         .then((response => {
             if (response.ok) {
                 return response.json()

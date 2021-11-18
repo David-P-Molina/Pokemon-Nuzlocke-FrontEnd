@@ -1,11 +1,12 @@
+import { URL } from '../../src/globalVariables'
 export const fetchTypes= () => {
     return (dispatch) => {
-        fetch(`localhost:3000/types`)
+        fetch(`${URL}/types`)
         .then((response => {
             if (response.ok) {
                 return response.json()
                 .then((types) => {
-                    debugger
+                   console.log(types)
                 })
             } else {
                 return response.json()
