@@ -6,6 +6,7 @@ import pokemonReducer from './pokemonReducer'
 import rulesReducer from './rulesReducer'
 import teamsReducer from './teamsReducer'
 import trainersReducer from './trainersReducer'
+import typesReducer from './typesReducer'
 
 const rootReducer = combineReducers({
     games: gamesReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     pokemon: pokemonReducer,
     rules: rulesReducer,
     teams: teamsReducer,
-    trainers: trainersReducer
+    trainers: trainersReducer,
+    types: typesReducer
 })
 
 export default rootReducer
