@@ -7,8 +7,11 @@ export const fetchTypesAction= () => {
             if (response.ok) {
                 return response.json()
                 .then((types) => {
-                    debugger
-                   dispatch({ type:'FETCH_TYPES', types })
+                    const typesArray = []
+                    types.data.map((type) => {
+                        return typesArray.push(type.attributes)
+                    })
+                   dispatch({ type:'FETCH_TYPES', types: typesArray })
                 })
             } else {
                 return response.json()
