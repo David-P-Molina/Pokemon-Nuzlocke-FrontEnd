@@ -1,4 +1,8 @@
 # Pokemon Nuzlocke Creator
+<!-- summary -->
+
+## Features
+
 ## Installation
 
 ## Clone the repository
