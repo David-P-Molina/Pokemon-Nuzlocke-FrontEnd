@@ -7,6 +7,7 @@ export const fetchTypesAction= () => {
             if (response.ok) {
                 return response.json()
                 .then((types) => {
+                    debugger
                    dispatch({ type:'FETCH_TYPES', types })
                 })
             } else {

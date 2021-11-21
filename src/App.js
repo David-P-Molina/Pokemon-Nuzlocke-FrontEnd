@@ -3,12 +3,12 @@ import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchTypesAction } from './actions/TypeAction'
 
-function App() {
+function App(props) {
   useEffect(() => {
     fetchInfo()
   })
   const fetchInfo = () => {
-    this.props.fetchTypes()
+    props.fetchTypes()
   }
   return (
     <div className="App">
