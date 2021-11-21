@@ -1,6 +1,6 @@
 import { URL } from '../../src/globalVariables'
 
-export const fetchTypes= () => {
+export const fetchTypesAction= () => {
     return (dispatch) => {
         fetch(`${URL}/types`)
         .then((response => {
