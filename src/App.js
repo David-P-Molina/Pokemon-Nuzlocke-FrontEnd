@@ -7,6 +7,7 @@ import TypesContainer from './containers/TypesContainer';
 function App(props) {
   useEffect(() => {
     fetchInfo()
+    //currently fetches every few seconds, figure out how to update initially
   })
   const fetchInfo = () => {
     props.fetchTypes()
