@@ -13,14 +13,14 @@ function App(props) {
   }
   return (
     <div className="App">
-      <TypesContainer types={this.props.types}/>
+      <TypesContainer types={props.types}/>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    types: state.types
+    types: state.types.types
   }
 }
 const mapDispatchToProps = (dispatch) => {
