@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchTypesAction } from './actions/TypeAction'
-
+import TypesContainer from './containers/TypesContainer';
 
 function App(props) {
   useEffect(() => {
@@ -13,15 +13,20 @@ function App(props) {
   }
   return (
     <div className="App">
-
+      <TypesContainer types={this.props.types}/>
     </div>
   );
 }
 
+const mapStateToProps = (state) => {
+  return {
+    types: state.types
+  }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchTypes: () => dispatch(fetchTypesAction())
   }
 }
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
