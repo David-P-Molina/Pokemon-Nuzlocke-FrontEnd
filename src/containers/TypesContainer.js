@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
+import TypesList from '../components/Type/TypesList'
 
 class TypesContainer extends Component {
     render() {
-        
-
         return (
             <div>
                 <h1>Pokemon Types</h1>
-                {mapTypes}
+                <TypesList types={this.props.types}/>
             </div>
         )
     }
