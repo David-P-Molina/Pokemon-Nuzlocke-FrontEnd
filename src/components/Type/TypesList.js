@@ -5,7 +5,7 @@ const TypesList = ({types}) => {
     const mapTypes = () => types.map((type) => <Type type={type} />)
     const renderTypes = () => {
         if (types === []) {
-            return <h1>No Types</h1>
+            return <h1>Loading Types...</h1>
         } else {
            return mapTypes()
         }
