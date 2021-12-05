@@ -6,7 +6,7 @@ const TypesList = ({types}) => {
     const mapTypes = () => types.map((type) => <Type type={type} />)
     const renderTypes = () => {
         if (types === []) {
-            return <LoadingSpinner content="Types"/>
+            return <LoadingSpinner content="Co"/>
         } else {
            return mapTypes()
         }
