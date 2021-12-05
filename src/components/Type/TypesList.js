@@ -1,11 +1,12 @@
 import React from 'react'
 import Type from './Type'
+import LoadingSpinner from '../LoadingSpinner.js'
 
 const TypesList = ({types}) => {
     const mapTypes = () => types.map((type) => <Type type={type} />)
     const renderTypes = () => {
         if (types === []) {
-            return <h1>Loading Types...</h1>
+            return <LoadingSpinner content="Types"/>
         } else {
            return mapTypes()
         }
