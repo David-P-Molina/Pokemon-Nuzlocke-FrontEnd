@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchTypesAction } from './actions/TypeAction'
+import { fetchGenerationsAndGamesAction } from './actions/GenerationAction'
 import TypesContainer from './containers/TypesContainer';
 
 function App(props) {
@@ -10,6 +11,7 @@ function App(props) {
   }, [])
   const fetchInfo = () => {
     props.fetchTypes()
+    props.fetchGenerations()
   }
   return (
     <div className="App">
@@ -25,7 +27,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchTypes: () => dispatch(fetchTypesAction())
+    fetchTypes: () => dispatch(fetchTypesAction()),
+    fetchGenerationsAndGames: () => dispatch(fetchGenerationsAndGamesAction())
   }
 }
 
