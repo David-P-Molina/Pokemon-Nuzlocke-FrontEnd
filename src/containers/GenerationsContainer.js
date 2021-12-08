@@ -6,7 +6,7 @@ class GenerationsContainer extends Component {
         return (
             <div>
                 <h1>Pokemon Generations</h1>
-                <GenerationsList />
+                <GenerationsList generations={this.props.generations}/>
             </div>
         )
     }
