@@ -13,6 +13,7 @@ const GenerationsList = ({ generations }) => {
     }
     return (
         <div>
+            <h1>Generations</h1>
             {renderGenerations()}
         </div>
     )
