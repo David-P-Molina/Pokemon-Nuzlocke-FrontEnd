@@ -1,5 +1,5 @@
 import { URL } from '../../src/globalVariables'
-export const fetchGenerations= () => {
+export const fetchGenerationsAndGamesAction= () => {
     return (dispatch) => {
         fetch(`${URL}/generations`)
         .then((response => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import GenerationsList from '../components/Generation/GenerationsList'
+import GenerationsList from '../components/Generations/GenerationsList'
 
 class GenerationsContainer extends Component {
     render() {

@@ -4,8 +4,9 @@ const Generation = ({ generation }) => {
     const renderGames = (gen) => {
         return gen.games.map((gen) => (
             <li>
-                <Game info={gen}/>)
+                <Game info={gen}/>
             </li>
+        )
         )
     }
     return (
