@@ -9,17 +9,18 @@ import GenerationsContainer from './containers/GenerationsContainer'
 
 function App(props) {
   useEffect(() => {
+
+    const fetchInfo = () => {
+      props.fetchTypes()
+      props.fetchGenerationsAndGames()
+    }
     fetchInfo()
-  }, [])
-  const fetchInfo = () => {
-    props.fetchTypes()
-    props.fetchGenerationsAndGames()
-  }
+  }, [props])
   return (
     <div className="App">
       <TypesContainer types={props.types}/>
-      <GenerationsContainer generations={props.generations} />
-      <GamesContainer  games={props.games}/>
+      {/* <GenerationsContainer generations={props.generations} /> */}
+      {/* <GamesContainer  games={props.games}/> */}
     </div>
   );
 }
@@ -27,8 +28,8 @@ function App(props) {
 const mapStateToProps = (state) => {
   return {
     types: state.types.types,
-    generations: state.generations.generations,
-    games: state.games.games,
+    // generations: state.generations.generations,
+    //games: state.games.games,
   }
 }
 const mapDispatchToProps = (dispatch) => {
