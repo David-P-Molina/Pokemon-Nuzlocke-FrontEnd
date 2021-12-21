@@ -9,7 +9,12 @@ export const fetchGenerationsAndGamesAction= () => {
                 .then((generations) => {
                     debugger
                     generations.forEach((gen) => {
-                        dispatch({type: 'FETCH_GENERATIONS', generation: gen})
+                        dispatch({type: 'FETCH_GENERATIONS', generations: gen})
+                        let gamesArray = []
+                        gen.games.forEach((game) => {
+                            gamesArray.push(game)
+                        })
+                        dispatch({ type: 'FETCH_GAMES', games: gamesArray})
                     })
                     // dispatch two actions, one for fetch generations and for games
                 })
