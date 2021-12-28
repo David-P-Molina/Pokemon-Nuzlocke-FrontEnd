@@ -7,10 +7,12 @@ import rulesReducer from './rulesReducer'
 import teamsReducer from './teamsReducer'
 import trainersReducer from './trainersReducer'
 import typesReducer from './typesReducer'
+import generationsReducer from './generationsReducer'
 
 const rootReducer = combineReducers({
     games: gamesReducer,
-    graveyardReducer,
+    generations: generationsReducer,
+    graveyards: graveyardReducer,
     nuzlockes: nuzlockeReducer,
     pokemon: pokemonReducer,
     rules: rulesReducer,
