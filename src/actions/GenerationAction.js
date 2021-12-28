@@ -16,7 +16,6 @@ export const fetchGenerationsAndGamesAction= () => {
                         })
                         dispatch({ type: 'FETCH_GAMES', games: gamesArray})
                     })
-                    // dispatch two actions, one for fetch generations and for games
                 })
             } else {
                 return response.json()
