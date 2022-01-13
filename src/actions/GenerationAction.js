@@ -7,12 +7,12 @@ export const fetchGenerationsAndGamesAction= () => {
             if (response.ok) {
                 return response.json()
                 .then((generations) => {
-                    debugger
-                    generations.forEach((gen) => {
-                        dispatch({type: 'FETCH_GENERATIONS', generations: gen})
+                    generations.data.forEach(({attributes}) => {
+                        dispatch({type: 'FETCH_GENERATIONS', generations: attributes})
                         let gamesArray = []
-                        gen.games.forEach((game) => {
+                        attributes.games.forEach((game) => {
                             gamesArray.push(game)
+                            debugger
                         })
                         dispatch({ type: 'FETCH_GAMES', games: gamesArray})
                     })

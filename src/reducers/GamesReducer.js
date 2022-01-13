@@ -7,7 +7,7 @@ function GamesReducer(
         case 'FETCH_GAMES':
             return {
                 ...state,
-                Games: [...state.games, action.games] 
+                games: [...state.games, action.games] 
             }
         default: 
             return state
