@@ -5,7 +5,7 @@ import LoadingSpinner from '../LoadingSpinner'
 const GenerationsList = ({ generations }) => {
     const mapGenerations = () => generations.map((gen) => <Generation generation={gen}/>)
     const renderGenerations = () => {
-        if (generations === []) {
+        if (generations.length < 2) {
             return <LoadingSpinner content="Generation Info" />
         } else {
             return mapGenerations()
