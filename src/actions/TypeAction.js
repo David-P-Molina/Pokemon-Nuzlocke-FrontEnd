@@ -11,6 +11,7 @@ export const fetchTypesAction= () => {
                     types.data.map((type) => {
                         return typesArray.push(type.attributes)
                     })
+                    debugger
                    dispatch({ type:'FETCH_TYPES', types: typesArray })
                 })
             } else {

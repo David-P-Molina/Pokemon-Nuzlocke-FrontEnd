@@ -1,4 +1,5 @@
 import { URL } from '../../src/globalVariables'
+import { addGamesToState } from './GameAction'
 
 export const fetchGenerationsAndGamesAction= () => {
     return (dispatch) => {
@@ -12,9 +13,8 @@ export const fetchGenerationsAndGamesAction= () => {
                         let gamesArray = []
                         attributes.games.forEach((game) => {
                             gamesArray.push(game)
-                            debugger
                         })
-                        dispatch({ type: 'FETCH_GAMES', games: gamesArray})
+                        dispatch(addGamesToState(gamesArray))
                     })
                 })
             } else {

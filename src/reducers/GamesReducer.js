@@ -6,7 +6,6 @@ function GamesReducer(
     switch (action.type) {
         case 'FETCH_GAMES':
             return {
-                ...state,
                 games: [...state.games, action.games] 
             }
         default: 

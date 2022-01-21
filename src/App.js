@@ -9,13 +9,12 @@ import TypesContainer from './containers/TypesContainer';
 
 function App(props) {
   useEffect(() => {
-
     const fetchInfo = () => {
       props.fetchTypes()
       props.fetchGenerationsAndGames()
     }
     fetchInfo()
-  }, [props])
+  }, [])
   return (
     <div className="App">
       <TypesContainer types={props.types}/>

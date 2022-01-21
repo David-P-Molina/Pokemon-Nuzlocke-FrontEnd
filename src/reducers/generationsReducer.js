@@ -6,7 +6,6 @@ function GenerationsReducer(
     switch (action.type) {
         case 'FETCH_GENERATIONS':
             return {
-                ...state,
                 generations: [...state.generations, action.generation] 
             }
         default: 

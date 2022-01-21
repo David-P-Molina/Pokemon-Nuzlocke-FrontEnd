@@ -5,8 +5,8 @@ function typesReducer(
     ) {
         switch (action.type) {
             case 'FETCH_TYPES':
+                debugger
                 return {
-                    ...state,
                     types: action.types,
                 }
             default:
