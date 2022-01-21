@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { fetchTypesAction } from './actions/TypeAction'
 import { fetchGenerationsAndGamesAction } from './actions/GenerationAction'
 import TypesContainer from './containers/TypesContainer';
-// import GamesContainer from './containers/GamesContainer'
-// import GenerationsContainer from './containers/GenerationsContainer'
+import GamesContainer from './containers/GamesContainer'
+import GenerationsContainer from './containers/GenerationsContainer'
 
 function App(props) {
   useEffect(() => {
@@ -18,8 +18,8 @@ function App(props) {
   return (
     <div className="App">
       <TypesContainer types={props.types}/>
-      {/* <GenerationsContainer generations={props.generations} />
-      <GamesContainer  games={props.games}/> */}
+      <GenerationsContainer generations={props.generations} />
+      <GamesContainer  games={props.games}/>
     </div>
   );
 }

@@ -9,6 +9,7 @@ const Generation = ({ generation }) => {
         )
         )
     }
+    debugger
     return (
         <div>
             <h1>{generation.region}</h1>

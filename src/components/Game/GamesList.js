@@ -3,9 +3,10 @@ import LoadingSpinner from '../LoadingSpinner'
 import Game from './Game'
 
 const GamesList = ({games}) => {
-    const mapGames = () => games.map((game) => <Game game={game}/>)
+    const gamesArray = games.games
+    const mapGames = () => gamesArray.map((game) => <Game game={game}/>)
     const renderGames = () => {
-        if (games === []) {
+        if (gamesArray === []) {
             return <LoadingSpinner content="Games" />
         } else {
             return mapGames()
